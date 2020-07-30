@@ -2,8 +2,10 @@
 
 **Changelist**:
 - Added base64 encryption of a string
+- Added base64 decryption of a string (30/07)
 
 **TO-DO**:
-- Add base64 decryption
+- Prepare more test cases for Base64 encryption/decryption.
+- Move tests to standalone file
 - Improve encryption/decryption to take files and images as input
 - Add implementation of other algorythms (base16(hex),base32...) 
