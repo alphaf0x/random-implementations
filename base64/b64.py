@@ -38,7 +38,9 @@ def b64decode(data):
             letter_index = ALPHABET.index(letter)
             bin_letter = bin(letter_index)[2:].zfill(6)
             to_decode = to_decode + bin_letter
-        pass
+        for bytes in range(0, len(to_decode), 8):
+            decoded = decoded + chr(int(to_decode[bytes:bytes+8],2))
+    return decoded
     
 
 def to_binary(data):
@@ -59,7 +61,8 @@ def main():
     data = 'easure.'
     encoded_data = b64encode(data)
     print('Encoded: ' + encoded_data)
-    b64decode(encoded_data)
+    decoded_data = b64decode(encoded_data)
+    print('Decoded: ' + decoded_data)
 
 if __name__ == '__main__':
     test_encoding()
